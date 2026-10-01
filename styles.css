@@ -1,0 +1,86 @@
+:root{
+  --bg:#07111f;--panel:#0e1a2b;--card:#15243a;--text:#eef4ff;--muted:#a9b8ce;
+  --accent:#65a7ff;--accent2:#58e0b5;--line:#29415e;--shadow:0 12px 35px rgba(0,0,0,.18)
+}
+body.light{
+  --bg:#f5f8fc;--panel:#ffffff;--card:#ffffff;--text:#132238;--muted:#5b6b80;
+  --accent:#1769c2;--accent2:#0a8f6d;--line:#d6e0ec;--shadow:0 12px 35px rgba(31,50,75,.10)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);
+  background:linear-gradient(180deg,var(--bg) 0%,var(--panel) 140%);line-height:1.65;
+  transition:background .25s,color .25s
+}
+a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+button{font:inherit}
+.wrap{max-width:1050px;margin:0 auto;padding:0 24px}
+header{
+  position:sticky;top:0;z-index:5;border-bottom:1px solid var(--line);
+  background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px)
+}
+nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-size:20px;font-weight:800;color:var(--text)}
+.menu{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.menu a{color:var(--text)}
+.theme-btn{
+  border:1px solid var(--line);background:var(--card);color:var(--text);padding:9px 12px;
+  min-width:44px;min-height:44px;border-radius:10px;cursor:pointer
+}
+main{padding:58px 0}
+.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:36px;align-items:center}
+.hero h1{font-size:44px;line-height:1.12;margin:8px 0 18px}.hero p{font-size:18px;color:var(--muted);max-width:700px}
+.badge{display:inline-block;padding:5px 11px;border-radius:999px;border:1px solid var(--line);color:var(--accent2);font-size:14px}
+.button{
+  display:inline-flex;align-items:center;justify-content:center;margin-top:16px;padding:12px 17px;
+  min-height:44px;border-radius:10px;background:var(--accent);color:#06111f;font-weight:800;border:0;cursor:pointer
+}
+.illustration{width:100%;max-width:330px;margin:auto;display:block;border-radius:22px;border:1px solid var(--line);background:var(--card)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:34px}
+.card{border:1px solid var(--line);background:var(--card);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+.card h2,.card h3{margin-top:0}.muted{color:var(--muted)}
+.breadcrumbs{font-size:14px;color:var(--muted);margin-bottom:20px}
+.ux-panel{
+  margin-top:34px;border:1px solid var(--line);background:var(--card);border-radius:16px;padding:22px;
+  display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap
+}
+.counter{font-size:30px;font-weight:800}.status{color:var(--muted)}
+.activity-alert{
+  display:none;margin-top:14px;padding:12px 14px;border-radius:10px;border:1px solid var(--accent2);
+  color:var(--text);background:color-mix(in srgb,var(--accent2) 12%,transparent)
+}
+.activity-alert.show{display:block}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);margin-top:44px}
+
+/* Планшет: 768–1023 px */
+@media (min-width:768px) and (max-width:1023px){
+  .wrap{max-width:900px;padding:0 28px}
+  .hero{grid-template-columns:1fr .8fr;gap:26px}
+  .hero h1{font-size:38px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid .card:last-child{grid-column:1/-1}
+}
+
+/* Мобильный: <768 px */
+@media (max-width:767px){
+  .wrap{padding:0 18px}
+  header{position:static}
+  nav{align-items:stretch;flex-direction:column;padding:15px 0}
+  .menu{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .menu a,.theme-btn{display:flex;align-items:center;justify-content:center;min-height:46px}
+  .theme-btn{width:100%}
+  main{padding:34px 0}
+  .hero{grid-template-columns:1fr;gap:24px}
+  .hero h1{font-size:34px}
+  .hero p{font-size:17px}
+  .illustration{max-width:280px}
+  .grid{grid-template-columns:1fr}
+  .button{width:100%}
+  .ux-panel{align-items:stretch;flex-direction:column}
+}
+
+/* Десктоп: >=1024 px */
+@media (min-width:1024px){
+  .wrap{max-width:1050px}
+  .hero h1{font-size:44px}
+}

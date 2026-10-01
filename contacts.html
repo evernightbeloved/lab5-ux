@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Контакты CodeStart — адаптивная страница</title>
+<meta name="description" content="Контакты CodeStart на адаптивной странице с удобными кликабельными зонами и мобильной вёрсткой.">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="index.html">CodeStart</a>
+<div class="menu">
+  <a href="index.html">Главная</a>
+  <a href="about.html">О школе</a>
+  <a href="contacts.html">Контакты</a>
+  <button id="themeToggle" class="theme-btn" type="button">☀️ День</button>
+</div>
+</nav></div></header>
+<main><div class="wrap">
+<div class="breadcrumbs"><a href="index.html">Главная</a> → Контакты</div>
+<section>
+<span class="badge">Связь с нами</span>
+<h1>Контакты школы программирования</h1>
+<p class="muted">Блоки контактов корректно перестраиваются на узком экране и не создают горизонтальную прокрутку.</p>
+</section>
+<section class="grid">
+<article class="card"><h2>Email</h2><p>student@example.com</p></article>
+<article class="card"><h2>GitHub</h2><p><a href="https://github.com/evernightbeloved">github.com/evernightbeloved</a></p></article>
+<article class="card"><h2>Формат обучения</h2><p>Онлайн, самостоятельная практика и публикация проектов.</p></article>
+</section>
+
+<section class="ux-panel" aria-label="Демонстрация интерактивности">
+  <div>
+    <h2>Счётчик активности</h2>
+    <p class="status">Количество нажатий сохраняется в браузере.</p>
+    <div class="counter"><span id="clickCount">0</span> кликов</div>
+    <div id="activityAlert" class="activity-alert" role="status"></div>
+  </div>
+  <button id="activityButton" class="button" type="button">Добавить событие</button>
+</section>
+
+</div></main>
+<footer><div class="wrap">© 2026 CodeStart • Лабораторная работа №5</div></footer>
+</body>
+</html>

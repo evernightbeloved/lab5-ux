@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>О CodeStart — адаптивность и UX</title>
+<meta name="description" content="О школе CodeStart: адаптивная вёрстка, удобная навигация, доступность и переключение темы.">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="index.html">CodeStart</a>
+<div class="menu">
+  <a href="index.html">Главная</a>
+  <a href="about.html">О школе</a>
+  <a href="contacts.html">Контакты</a>
+  <button id="themeToggle" class="theme-btn" type="button">☀️ День</button>
+</div>
+</nav></div></header>
+<main><div class="wrap">
+<div class="breadcrumbs"><a href="index.html">Главная</a> → О школе</div>
+<section class="hero">
+<div>
+<span class="badge">О CodeStart</span>
+<h1>Школа программирования CodeStart</h1>
+<p>На планшетах карточки перестраиваются в две колонки, а на мобильных устройствах — в одну. Размеры текста и элементов управления сохраняют читаемость.</p>
+</div>
+<img class="illustration" src="course.svg" alt="Учебная платформа школы CodeStart" width="720" height="520">
+</section>
+<section class="grid">
+<article class="card"><h2>Навигация</h2><p>На мобильном экране меню превращается в компактную сетку с крупными зонами нажатия.</p></article>
+<article class="card"><h2>Доступность</h2><p>Изображения содержат alt, кнопки имеют подписи, текст сохраняет контраст.</p></article>
+<article class="card"><h2>Темы</h2><p>Переключатель день/ночь работает через JavaScript и CSS-класс.</p></article>
+</section>
+
+<section class="ux-panel" aria-label="Демонстрация интерактивности">
+  <div>
+    <h2>Счётчик активности</h2>
+    <p class="status">Количество нажатий сохраняется в браузере.</p>
+    <div class="counter"><span id="clickCount">0</span> кликов</div>
+    <div id="activityAlert" class="activity-alert" role="status"></div>
+  </div>
+  <button id="activityButton" class="button" type="button">Добавить событие</button>
+</section>
+
+</div></main>
+<footer><div class="wrap">© 2026 CodeStart • Лабораторная работа №5</div></footer>
+</body>
+</html>
